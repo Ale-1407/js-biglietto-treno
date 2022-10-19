@@ -26,3 +26,9 @@ console.log(km);
 let age = parseInt(prompt('Quanti anni hai?'));
 console.log(age);
 
+/* CALCOLO PREZZO TOTALE DEL VIAGGIO */
+
+const price = 0.21;
+let total = km * price;
+console.log(total);
+
