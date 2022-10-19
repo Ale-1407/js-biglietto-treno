@@ -14,7 +14,7 @@ L'output del prezzo finale va messo fuori in forma umana
 Questo richiederà un minimo di ricerca.
   - scrivere il prezzo
   - limitare il prezzo a  2 decimali
- 
+
  */
 
 
@@ -28,17 +28,34 @@ console.log(age);
 
 /* CALCOLO PREZZO TOTALE DEL VIAGGIO */
 
-const price = 0.21;
-let total = km * price;
+const pricekm = 0.21;
+let total = km * pricekm;
 console.log(total);
 
 /* SCONTO 20% */
 
-let discount20 = (total / 100) * 20;
-let totdiscount20 = discount20 - total;
+let totaldiscount20 = total * 0.2;
+let discount20 = total - totaldiscount20;
 
 
 /* SCONTO 40% */
 
-let discount40 = (total / 100) * 40;
-let totdiscount40 = discount40 - total;
+let totaldiscount40 = total * 0.4;
+let discount40 = total - totaldiscount40;
+
+/* OUTPUT */
+
+if (age <= 18){
+    totalprice = discount20.toFixed(2);
+}
+
+else if (age >= 65){
+    totalprice = discount40.toFixed(2);
+}
+
+else{
+    totalprice = total.toFixed(2);
+}
+
+document.getElementById('prezzo').innerHTML = 
+`Il costo del tuo biglietto è: ${totalprice} €`;
