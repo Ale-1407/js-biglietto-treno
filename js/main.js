@@ -32,3 +32,13 @@ const price = 0.21;
 let total = km * price;
 console.log(total);
 
+/* SCONTO 20% */
+
+let discount20 = (total / 100) * 20;
+let totdiscount20 = discount20 - total;
+
+
+/* SCONTO 40% */
+
+let discount40 = (total / 100) * 40;
+let totdiscount40 = discount40 - total;
